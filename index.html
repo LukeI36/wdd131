@@ -8,11 +8,18 @@
         content="Luke Ina's home page of the first assignment of WDD131 - Dynamic Web Fundamentals">
     <meta name="author" content="Luke Ina">
     <title>WDD 131 - Dynamic Web Fundamentals - Luke Ina</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,300&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <span id="course-title">"WDD 131 - Dynamic Web Fundamentals"</span>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
         <nav>
             <a href="https://www.linkedin.com/in/luke-ina/">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
@@ -22,12 +29,51 @@
     </header>
     <main>
         <h1>Luke Ina</h1>
-        <section class="card">
-
-        </section>
-        <section class="card">
-
-        </section>
+        <div id="first-section">
+            <section class="card">
+                <p id="first-section-header" class="section-title">About Me</p>
+                <div id="first-section-grid" class="spacing">
+                    <div id="about-me">
+                        <p>My name is Luke Ina, I was born in Canada and live in British Columbia. I'm currently trying
+                            to
+                            find
+                            work for two reasons. One, to get money for future schooling, two, to figure out what type
+                            of
+                            career
+                            I want to pursue. I love to play video games and collect transformers.</p>
+                        <h2 class="center-text">British Columbia, Canada</h2>
+                        <div class="bc-flag">
+                            <img src="images/flag-of-british-columbia.jpg" alt="Flag of British Columbia">
+                            <p id="flag-description">Official flag of British Columbia</p>
+                        </div>
+                        <p>British Columbia is the third largest province in Canada. Among all the provinces
+                            and
+                            territories
+                            of
+                            Canada, British Columbia has the mildest climate, meaning that British Columbia doesn't
+                            have
+                            long
+                            snow time periods as other parts in Canada and flowers often start blooming as early as
+                            February.
+                        </p>
+                    </div>
+                    <img src="images/profile-picture.jpg" alt="Luke Ina profile picture">
+                </div>
+            </section>
+        </div>
+        <div id="second-section">
+            <section class="card">
+                <p class="section-title">Web Dev Resources</p>
+                <ul class="resources">
+                    <li><a href="https://dev.to/">Dev.to Community</a></li>
+                    <li><a href="https://www.smashingmagazine.com/category/coding/">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/">W3 School</a></li>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                    <li><a href="https://picsum.photos/">Lorem Picsum Image Placeholder</a></li>
+                </ul>
+            </section>
+        </div>
     </main>
     <footer>
         <p>©<span id="currentyear"></span> | Luke Ina | British Columbia, Canada</p>
