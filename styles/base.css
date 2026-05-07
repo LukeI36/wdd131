@@ -2,6 +2,7 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0;
 }
 
 span,
@@ -18,16 +19,21 @@ header {
 }
 
 nav {
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(41, 41, 41);
     padding: 1rem;
     display: flex;
     justify-content: space-around;
+    flex: 1 1 100%;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+nav a:hover {
+    border: 1px solid white;
 }
 
 main {
@@ -88,12 +94,6 @@ main h2 {
     border-radius: 10px;
     margin: 0.5rem;
     grid-column: 3 / 4;
-}
-
-.resources {
-    display: grid;
-    justify-content: left;
-    align-items: center;
 }
 
 li {
