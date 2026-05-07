@@ -1,0 +1,43 @@
+/* 
+CSS media queries allow you to apply different styles to your website depending on the device being used to view it. They allow the site to adapt to different screen sizes, orientations, and even user preferences.
+
+CSS media queries are essential to responsive web design.
+
+@media allows you to tell the website when to apply new rules under the media rule, such as repositioning, resizing, hidding. or showing elements.
+
+
+general syntax of @media:
+@media not|only mediatype and (expressions) {
+    // CSS rules go here inside the @media query's opening and closing curly brackets {}
+}
+
+ex:
+@media screen and (min-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+        margin: 1rem;
+        color: navy'
+    }
+}
+    
+In the example above (from lesson):
+1️⃣ @media screen and (min-width: 640px) { 
+is the signature line of the @media query block that applies CSS rules when the specified conditions are met. In this example, the conditions require the media type to be a screen and the viewport width to be at least 640 pixels. 
+
+2️⃣ h1 {
+<h1>element selector starts the defined CSS rule. 
+
+3️⃣-5️⃣ font-size: 2.5rem;
+        margin: 1rem;
+        color: navy;
+are declarations to be applied to any <h1>elements if the @media query conditions are met. 
+
+6️⃣ The first }
+closes the CSS rule for <h1>code elements. 
+
+7️⃣ The last }
+closes the media query.
+
+
+When having @media, it is better to seperate each @media format into different CSS files
+*/
