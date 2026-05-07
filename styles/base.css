@@ -33,7 +33,8 @@ nav a {
 }
 
 nav a:hover {
-    border: 1px solid white;
+    text-decoration: underline;
+    color: lightgreen;
 }
 
 main {
@@ -45,6 +46,7 @@ main {
 }
 
 main h1 {
+    font-size: 3rem;
     grid-column: 1 / 4;
     text-align: center;
 }
@@ -97,7 +99,7 @@ main h2 {
 }
 
 li {
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 .section-title {
