@@ -1,0 +1,31 @@
+@media screen and (min-width: 825px) {
+    main {
+        width: 100%;
+        min-width: 600px;
+        max-width: 1000px
+    }
+
+    #top-menu {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+    }
+
+    nav {
+        grid-column: 3/4;
+        align-content: center;
+        justify-content: end;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    #temples {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+        min-width: 5rem;
+        max-width: 20rem;
+    }
+}
