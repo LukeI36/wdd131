@@ -1,0 +1,25 @@
+/* 
+Pseudo-classes and pseudo-elements extend what selectors can target. A pseudo-class defines a special state of an element—for example, changing a button's color when a user hovers over it. A pseudo-element styles a specific part of an element, such as the first letter or first line of a paragraph. 
+
+Pseudo-classes target the element states, while pseudo-elements style specific parts of an element. You have been using the :hover pseudo-class to select a button when a user hovers over it.
+
+We have also been using Pseudo classes by using :root for storing variables in CSS. Remember, having variables is helpful when you want to change a value of something that is applied to multiple elements of a webpage.
+
+A common design issue with color contrast is not accounting for a browser's default settings, specifically for the link and visited properties of anchor tags. These can be adjusted using pseudo-classes.
+
+
+Pseudo classes use 1 : while pseudo elements use 2 ::.
+
+Want to learn more:
+Psuedo classes = https: //developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+:root = https: //developer.mozilla.org/en-US/docs/Web/CSS/:root
+
+
+
+
+
+
+
+
+
+*/
