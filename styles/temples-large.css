@@ -16,8 +16,16 @@
         justify-content: end;
     }
 
+    #navigation {
+        display: flex;
+    }
+
     nav ul {
         flex-direction: row;
+    }
+
+    #menu {
+        display: none;
     }
 
     #temples {
