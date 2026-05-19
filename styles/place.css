@@ -1,12 +1,18 @@
+body{
+    
+}
+header{
+
+    text-align: center;
+}
 footer {
-    background-color: green;
+    background-color: darkblue;
     color: white;
     text-align: center;
     padding: 1rem;
 }
 
 #copyright {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
