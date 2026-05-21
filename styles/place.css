@@ -1,15 +1,75 @@
-body{
-    
+:root {
+    --primary-color: #0047BB;
+    --secondary-color: #D22630;
+    --text-color: #000000;
+    --secondary-text-color: #ffffff;
+    --pad: 1rem;
 }
-header{
 
-    text-align: center;
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    margin: 0 auto;
+    color: var(--text-color);
 }
-footer {
-    background-color: darkblue;
-    color: white;
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
     text-align: center;
-    padding: 1rem;
+    padding: var(--pad);
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    gap: 5px;
+    margin: 0;
+}
+
+.topic {
+    grid-column: 1/2;
+    font-weight: 700;
+    text-align: end;
+    margin: 0;
+}
+
+.value {
+    grid-column: 2/3;
+    text-align: start;
+    margin: 0;
+}
+
+#data,
+#weather {
+    display: block;
+    text-align: center;
+    padding: var(--pad);
+}
+
+#weather h2::after {
+    content: "";
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: var(--pad);
 }
 
 #copyright {
@@ -19,5 +79,5 @@ footer {
 
 
 #lastModified {
-    color: rgb(255, 255, 0);
+    color: #FFCD00;
 }

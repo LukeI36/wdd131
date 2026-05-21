@@ -1,3 +1,40 @@
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 500px) {
+    :root {
+        --primary-color: #0047BB;
+        --secondary-color: #D22630;
+        --text-color: #ffffff;
+        --pad: 1rem;
+    }
+
+    body {
+        color: var(--text-color);
+    }
+
+    picture {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    #data,
+    #weather {
+        position: absolute;
+        background-color: var(--primary-color);
+    }
+
+    #data {
+        top: 7rem;
+        left: 3rem;
+    }
+
+    #weather {
+        bottom: 0;
+        right: 3rem;
+    }
+
+    #weather h2::after {
+        content: " 🌦";
+    }
+
 
 }
