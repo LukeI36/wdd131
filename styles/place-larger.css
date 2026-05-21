@@ -19,7 +19,15 @@
     #data,
     #weather {
         position: absolute;
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
+    }
+
+    .topic {
+        text-align: start;
+    }
+
+    .value {
+        text-align: end;
     }
 
     #data {
@@ -33,8 +41,10 @@
     }
 
     #weather h2::after {
-        content: " 🌦";
+        content: " ⛅";
     }
 
-
+    #weather img {
+        display: none;
+    }
 }
