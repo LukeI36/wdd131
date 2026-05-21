@@ -1,4 +1,4 @@
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
     :root {
         --primary-color: #0047BB;
         --secondary-color: rgba(210, 38, 48, .7);
@@ -25,14 +25,6 @@
         font-size: 0.8rem;
         position: absolute;
         background-color: var(--secondary-color);
-    }
-
-    .topic {
-        text-align: start;
-    }
-
-    .value {
-        text-align: end;
     }
 
     #data {

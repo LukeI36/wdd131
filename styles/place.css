@@ -30,7 +30,7 @@ h2 {
     margin: var(--mar);
 }
 
-div {
+.info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
