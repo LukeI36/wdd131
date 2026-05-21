@@ -4,6 +4,7 @@
     --text-color: #000000;
     --secondary-text-color: #ffffff;
     --pad: 1rem;
+    --mar: 0.5rem;
 }
 
 body {
@@ -26,7 +27,7 @@ header {
 }
 
 h2 {
-    margin: 0;
+    margin: var(--mar);
 }
 
 div {
