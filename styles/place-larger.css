@@ -16,11 +16,6 @@
         background-color: var(--primary-color);
     }
 
-    picture {
-        width: 100%;
-        height: auto;
-    }
-
     #data,
     #weather {
         font-size: 0.85rem;
