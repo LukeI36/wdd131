@@ -1,0 +1,32 @@
+<!-- 
+For site performance, our goal is to load the webpage and make it ready for any action in a few seconds of the user's requests. Webpages, however, often contain many requests and payloads, including images, that increase the load time beyond the ideal target.
+
+There is a solution to this issue however. What if we want images to load in only when the user scrolls and actually sees the image. This can be done through something called progressive loading or 'lazy-loading'.
+
+Quote from lesson:
+"It's important to deliver something meaningful to the user as soon as possible — the longer they wait for the page to load, the bigger the chance they will leave before waiting for everything to finish. We should be able to show them at least the basic view of the page they want to see, with placeholders in the places more content will eventually be loaded. This could be achieved by progressive loading ─ also known as Lazy loading. This is all about deferring loading of as many resources as possible (HTML, CSS, JavaScript), and only loading those immediately that are really needed for the very first experience." ─ MDN
+
+Our objective is to make pages load faster. To do so, we should only load in the essential content first and then any extra content should be loaded later when the user sees/interacts with the webpage.
+
+An example of how to add lazyloading to an image:
+<img src="images/anyphoto.jpg" alt="A good description of the non decorative image" loading="lazy" width="300" height="500">
+
+the 'loading' attribute can have two values, 'eager' and 'lazy'. eager instructs the browser to load the resource immediately. lazy defers loading times, such as <img> and <iframe>, until the come to view on the browser through the user scrolling.
+
+Another quote:
+"Lazy loading is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a
+way to shorten the length of the critical rendering path, which translates into reduced page load times. Lazy loading
+can occur on different moments in the application, but it typically happens on some user interactions such as scrolling
+and navigation." – MDN
+
+loading can be used on almost anything, but are mainly used for img, iframe, video, and audio tags.
+
+extra notes:
+you can preload fonts by using rel="preload" in the link tag.
+
+You can tell if a tag with the loading attribute has loaded completely by looking at it's Boolean 'complete' property.
+
+
+
+
+-->
