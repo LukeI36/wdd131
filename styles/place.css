@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #0047BB;
+    --primary-color: rgb(0, 71, 187);
     --secondary-color: rgb(211, 39, 47);
-    --text-color: #000000;
-    --secondary-text-color: #ffffff;
+    --text-color: rgb(0, 0, 0);
+    --secondary-text-color: rgb(255, 255, 255);
     --pad: 1rem;
     --mar: 0.25rem;
 }

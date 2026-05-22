@@ -1,8 +1,8 @@
 @media screen and (min-width: 600px) {
     :root {
-        --primary-color: #0047BB;
+        --primary-color: rgb(0, 71, 187);
         --div-background-color: rgba(211, 39, 47, .8);
-        --text-color: #ffffff;
+        --text-color: rgb(255, 255, 255);
         --pad: 1rem;
         --mar: 0.5rem;
     }
