@@ -20,9 +20,12 @@ else {
 }
 
 temperatureOutput.textContent = temperature_C;
+temperatureOutput.append(" °C");
 weatherOutput.textContent = weather;
 windSpeedOutput.textContent = wind_speed_per_hour;
+windSpeedOutput.append(" km/h");
 windChillOutput.textContent = wind_chill;
+windChillOutput.append(" °C");
 
 
 //footer code

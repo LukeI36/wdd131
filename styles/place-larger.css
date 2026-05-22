@@ -1,7 +1,7 @@
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 600px) {
     :root {
         --primary-color: #0047BB;
-        --secondary-color: rgba(210, 38, 48, .7);
+        --secondary-color: rgba(210, 38, 48, .85);
         --text-color: #ffffff;
         --pad: 1rem;
         --mar: 0.5rem;
@@ -22,9 +22,14 @@
 
     #data,
     #weather {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         position: absolute;
         background-color: var(--secondary-color);
+    }
+
+    #data p,
+    #weather p {
+        margin: 0;
     }
 
     #data {

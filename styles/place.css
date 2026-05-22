@@ -4,7 +4,7 @@
     --text-color: #000000;
     --secondary-text-color: #ffffff;
     --pad: 1rem;
-    --mar: 0.5rem;
+    --mar: 0.25rem;
 }
 
 body {
@@ -55,6 +55,12 @@ h2 {
     display: block;
     text-align: center;
     padding: var(--pad);
+    border-radius: 5px;
+}
+
+#data p,
+#weather p {
+    margin: var(--mar);
 }
 
 #weather h2::after {
@@ -64,6 +70,11 @@ h2 {
 img {
     width: 100%;
     height: auto;
+}
+
+.svg-image {
+    width: 5rem;
+    margin: var(--mar);
 }
 
 footer {
