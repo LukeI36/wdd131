@@ -1,6 +1,6 @@
 :root {
     --primary-color: #0047BB;
-    --secondary-color: #D22630;
+    --secondary-color: rgb(211, 39, 47);
     --text-color: #000000;
     --secondary-text-color: #ffffff;
     --pad: 1rem;
@@ -24,6 +24,7 @@ header {
     text-align: center;
     padding: var(--pad);
     margin: 0 auto;
+    border-bottom: 1rem solid var(--secondary-color);
 }
 
 h2 {
@@ -61,10 +62,6 @@ h2 {
 #data p,
 #weather p {
     margin: var(--mar);
-}
-
-#weather h2::after {
-    content: "";
 }
 
 img {

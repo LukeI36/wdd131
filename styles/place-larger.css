@@ -1,7 +1,7 @@
 @media screen and (min-width: 600px) {
     :root {
         --primary-color: #0047BB;
-        --secondary-color: rgba(210, 38, 48, .85);
+        --div-background-color: rgba(211, 39, 47, .8);
         --text-color: #ffffff;
         --pad: 1rem;
         --mar: 0.5rem;
@@ -13,6 +13,7 @@
 
     #hero-img {
         position: relative;
+        background-color: var(--primary-color);
     }
 
     picture {
@@ -24,7 +25,7 @@
     #weather {
         font-size: 0.85rem;
         position: absolute;
-        background-color: var(--secondary-color);
+        background-color: var(--div-background-color);
     }
 
     #data p,
@@ -56,8 +57,6 @@
     #data,
     #weather {
         font-size: 1rem;
-        position: absolute;
-        background-color: var(--secondary-color);
     }
 
     #data {
