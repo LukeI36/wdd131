@@ -63,21 +63,12 @@ const temples = [
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-        templeName: "Vancouver British Columbia",
-        location: "British Columbia, Canada",
-        dedicated: "2010, May, 2",
-        area: 28165,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/vancouver-british-columbia-temple/vancouver-british-columbia-temple-13064-main.jpg"
-
-    },
-    {
         templeName: "Tokyo Japan",
         location: "Tokyo, Japan",
         dedicated: "1980, October, 27",
         area: 53997,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
+            "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-17020.jpg"
 
     },
     {
@@ -89,7 +80,15 @@ const temples = [
             "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
 
     },
+    {
+        templeName: "Vancouver British Columbia",
+        location: "British Columbia, Canada",
+        dedicated: "2010, May, 2",
+        area: 28165,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/vancouver-british-columbia-temple/vancouver-british-columbia-temple-13064-main.jpg"
 
+    }
 ];
 
 //Call templeCards function
