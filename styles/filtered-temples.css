@@ -1,0 +1,121 @@
+body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background-color: darkblue;
+    color: white;
+}
+
+#top-menu {
+    position: relative;
+}
+
+#title {
+    text-align: start;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 1.5rem;
+    padding: 1rem;
+    flex: 1 1 100%;
+}
+
+nav li:hover {
+    border: 1px solid white;
+    text-decoration: underline;
+}
+
+#navigation {
+    display: none;
+}
+
+#navigation.open {
+    display: flex;
+}
+
+#menu {
+    background: none;
+    color: white;
+    font-size: 3rem;
+    border: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+main {
+    width: 100%;
+    min-width: 100px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    align-self: center;
+    text-align: center;
+}
+
+#temples {
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+}
+
+figcaption {
+    color: darkblue;
+}
+
+img {
+    width: 100%;
+    min-width: 5rem;
+    max-width: 40rem;
+    height: auto;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#copyright {
+    justify-content: center;
+    align-items: center;
+}
+
+
+#lastModified {
+    color: rgb(255, 255, 0);
+}
