@@ -92,6 +92,44 @@ const temples = [
 
 ];
 
+//Call templeCards function
+function createTempleCards() {
+    temples.forEach(temple => {
+        const grid = document.getElementById("temples")
+        const fragment = document.createDocumentFragment();
+        const templeCard = document.createElement("section");
+        const info = document.createElement("div");
+        const nameOutput = document.createElement("p");
+        const locationOutput = document.createElement("p");
+        const dedicatedOutput = document.createElement("p");
+        const areaOutput = document.createElement("p");
+        const img = document.createElement("img");
+
+        nameOutput.innerHTML = `<div class="card-title">${temple.templeName}</div>`;
+        locationOutput.innerHTML = `<span class="topic">Location: </span>${temple.location}`;
+        dedicatedOutput.innerHTML = `<span class="topic">Dedicated: </span>${temple.dedicated}`;
+        areaOutput.innerHTML = `<span class="topic">Size: </span>${temple.area} sq ft`;
+
+        templeCard.setAttribute("class", "templeCard");
+
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName} temple`);
+        img.setAttribute("loading", "lazy")
+
+        info.appendChild(nameOutput);
+        info.appendChild(locationOutput);
+        info.appendChild(dedicatedOutput);
+        info.appendChild(areaOutput);
+
+        fragment.appendChild(info);
+        fragment.appendChild(img);
+
+        templeCard.appendChild(fragment);
+        grid.appendChild(templeCard)
+    });
+}
+
+createTempleCards();
 
 //for hamburger button function
 ham_Button.addEventListener("click", function () {
