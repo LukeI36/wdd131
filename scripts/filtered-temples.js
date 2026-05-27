@@ -131,6 +131,10 @@ function createTempleCards(filteredTemples) {
 
 createTempleCards(temples);
 
+//title of catagory
+const templeTitle = document.getElementById("temples-title");
+
+
 //makes new array based on conditions
 const homeLink = document.getElementById("base");
 const oldLink = document.getElementById("old");
@@ -140,30 +144,35 @@ const smallLink = document.getElementById("small");
 
 //home (all temples)
 homeLink.addEventListener("click", () => {
+    templeTitle.textContent = "Home";
     createTempleCards(temples);
 });
 
 //old temples
 oldLink.addEventListener("click", () => {
     const oldTemples = temples.filter(temple => parseFloat((temple.dedicated.split())[0]) < 1900);
+    templeTitle.textContent = "Old";
     createTempleCards(oldTemples);
 });
 
 //new temples
 newLink.addEventListener("click", () => {
     const newTemples = temples.filter(temple => parseFloat((temple.dedicated.split())[0]) > 2000);
+    templeTitle.textContent = "New";
     createTempleCards(newTemples);
 });
 
 //large temples
 largeLink.addEventListener("click", () => {
     const largeTemples = temples.filter(temple => temple.area > 90000);
+    templeTitle.textContent = "Large";
     createTempleCards(largeTemples);
 });
 
 //small temples
 smallLink.addEventListener("click", () => {
     const smallTemples = temples.filter(temple => temple.area < 10000);
+    templeTitle.textContent = "Small";
     createTempleCards(smallTemples);
 });
 
