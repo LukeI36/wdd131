@@ -1,8 +1,8 @@
 const current_year = document.querySelector("#currentyear");
-const today = new Date()
+const today = new Date();
 
-const ham_Button = document.getElementById("menu")
-const navigation = document.getElementById("navigation")
+const ham_Button = document.getElementById("menu");
+const navigation = document.getElementById("navigation");
 
 //array of temples
 const temples = [
@@ -77,7 +77,7 @@ const temples = [
         dedicated: "1893, April, 6",
         area: 382207,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
+            "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-4937.jpg"
 
     },
     {
@@ -92,9 +92,10 @@ const temples = [
 ];
 
 //Call templeCards function
-function createTempleCards() {
-    temples.forEach(temple => {
-        const grid = document.getElementById("temples")
+function createTempleCards(filteredTemples) {
+    const grid = document.getElementById("temples");
+    grid.innerHTML = "";
+    filteredTemples.forEach(temple => {
         const fragment = document.createDocumentFragment();
         const templeCard = document.createElement("section");
         const info = document.createElement("div");
@@ -113,7 +114,7 @@ function createTempleCards() {
 
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} temple`);
-        img.setAttribute("loading", "lazy")
+        img.setAttribute("loading", "lazy");
 
         info.appendChild(nameOutput);
         info.appendChild(locationOutput);
@@ -124,17 +125,53 @@ function createTempleCards() {
         fragment.appendChild(img);
 
         templeCard.appendChild(fragment);
-        grid.appendChild(templeCard)
+        grid.appendChild(templeCard);
     });
 }
 
-createTempleCards();
+createTempleCards(temples);
+
+//makes new array based on conditions
+const homeLink = document.getElementById("base");
+const oldLink = document.getElementById("old");
+const newLink = document.getElementById("new");
+const largeLink = document.getElementById("large");
+const smallLink = document.getElementById("small");
+
+//home (all temples)
+homeLink.addEventListener("click", () => {
+    createTempleCards(temples);
+});
+
+//old temples
+oldLink.addEventListener("click", () => {
+    const oldTemples = temples.filter(temple => parseFloat((temple.dedicated.split())[0]) < 1900);
+    createTempleCards(oldTemples);
+});
+
+//new temples
+newLink.addEventListener("click", () => {
+    const newTemples = temples.filter(temple => parseFloat((temple.dedicated.split())[0]) > 2000);
+    createTempleCards(newTemples);
+});
+
+//large temples
+largeLink.addEventListener("click", () => {
+    const largeTemples = temples.filter(temple => temple.area > 90000);
+    createTempleCards(largeTemples);
+});
+
+//small temples
+smallLink.addEventListener("click", () => {
+    const smallTemples = temples.filter(temple => temple.area < 10000);
+    createTempleCards(smallTemples);
+});
 
 //for hamburger button function
 ham_Button.addEventListener("click", function () {
     navigation.classList.toggle("open");
     ham_Button.classList.toggle("open");
-})
+});
 
 
 //For footer modified time
