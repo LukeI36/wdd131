@@ -1,0 +1,249 @@
+<!-- 
+first resource: https://designsystem.digital.gov/components/form/
+
+We learned from WDD130 about what HTML forms are. We will continue to learn about forms and some new techniques that we can use.
+
+"The <form> HTML element represents a document section containing interactive controls for submitting information."
+
+Forms allow you to provide and interface to the user that they can use to communicate information through the webpage.
+
+
+Guidelines to making forms:
+
+-Don't control the element order using CSS. Instead, in html, organize every element into the order in which you would like to see.
+
+-Align validation with inputs. Visually align validation messages with the input fields so people using screen magnifiers can read them quickly.
+
+-Use proper markup. Use labels, legends, and fieldsets in order to properly organize your form so the user can easily tell what each area represents.
+
+-Use legends. Each fieldset should have one legend. One common use of the fieldset and legend elements is a question with radio-button options for answers. The question text and radio buttons are wrapped in a fieldset, with the question itself being inside the legend tag.
+
+ex: -->
+<form action="/action_page.php">
+    <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+<!--
+
+fieldsets group multiple inputs while legends are the titles of each fieldset.
+
+-Embed multiple fieldsets and legends for more complex forms.
+
+-Use simple vertical layouts. Keep your form blocks in a vertical pattern. This approach is ideal because of limited vision that makes it hard to scan from right to left.
+
+
+
+Disable states guidelines:
+
+-If you can, don't use disabled states (meaning to make a part of the form unchangeable/disabled). If you do however need to use them to pervent errors (such as perventing multiple submissions), there are still guidelines you need to follow.
+
+If you are using disabled states:
+-explain why the element has been disabled to the user (using helper tips or tooltips)
+-Use inline validation to minimize errors in realtime 
+-Support screen reader users and keyboard navigators by using aria-disabled=true instead of the disabled attribute to indicate the presence of a disabled element
+-Use JavaScript to programmatically disable the element to prevent clicks
+
+
+
+Identify required fields:
+
+use a red "*" to indicate if a field needs to be filled out and tell the user at the top of the form that the red "*" means it's required. You can make something required in a form by using the attribute "required". If something is optional, make sure that it has the "(optional)" label connected to it.
+
+Add a error notification or message that tells the user if a field was filled out incorrectly.
+
+
+
+Known issues (from lesson):
+
+VoiceOver on iOS currently does not support fieldset and legend elements for forms. You can address this issue by using aria-labelledby="for-attribute-of-label id-of-legend id-of-additional-info" on each input in the fieldset. Using aria-labelledby will overwrite the default text read by the screen reader, so it is important to include all relevant information.
+
+VoiceOver on OS X offers partial support for aria-describedby. There's full support for conveying description on text inputs, partial support for description changes when the text input is in focus, and no support for role="alert". Visit a11ysupport.io to view the full status of support.
+
+
+
+
+
+
+second resource: https://www.sitepoint.com/html5-form-attributes-part-2/?utm_content=bufferd6894&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
+Attributes:
+
+pattern: Provides a regular expression that the user’s input must match in order to be considered valid. It is often used in free-from text.
+
+When including a pattern, you should always indicate to users what is the expected (and required) pattern.
+
+it is important to include a title attribute with pattern for when the user hovers over the input.
+
+example
+-->
+
+<li>
+
+    <label for="password">I would like my password to be:</label>
+
+    <p>(at least 6 characters, no spaces)</p>
+
+    <input type="password" id="password" name="password" required title="(at least 6 characters, no spaces)"
+        pattern="\S{6,}">
+
+</li>
+
+<!--
+\S refers to “any nonwhitespace character,” and {6,} means “at least six times.” If you wanted to stipulate the maximum amount of characters, the syntax for between six and ten characters, for example, would be \S{6,10}.
+
+As with the required attribute, the pattern attribute will prevent the form from being submitted if there is no match for the pattern, and will provide an error message.
+
+
+
+disabled: Disables form controls, preventing the user from interacting with them. This attribute can be useful in situations where certain input fields should not be editable until specific conditions are met.
+
+Generally, form elements with the disabled attribute have the content grayed out by default in the browser. Browsers will prohibit the user from focusing on a form control that has the disabled attribute set. This attribute is often used to disable the submit button until all fields are correctly filled out.
+
+You can employ the :disabled pseudo-class in your CSS to style disabled form controls, and use either :enabled or :not(:disabled) pseudo-classes to target form controls that aren’t disabled.
+
+Form controls with the disabled attribute aren’t submitted along with the form so their values will be inaccessible to your form processing code on the server side. If you want a form value that users are unable to edit but can still see and submit, use the readonly attribute.
+
+
+
+readonly: Makes it impossible for the user to edit the form field, but unlike the disabled attribute, the field can still receive focus and its value is submitted with the form.
+
+In a comments form, we may want to include the URL of the current page or the title of the article that is being commented on, letting the user know that we’re collecting this data without allowing them to change it:
+
+example:
+-->
+<label for="about">Article Title</label>
+
+<input type="text" name="about" id="about" readonly="http://www.thehtml5herald.com/register.html">
+
+<!--
+multiple: allows for multiple values to be entered. 
+
+
+
+form: Not be confused with the form element, form attribute allows developers to associate form elements with forms in which they’re not nested. This means that you can now associate a fieldset or form control with any other form in the document, solving the age-old issue of forms not being nestable (basically you can transfer one form's information/inputs to another form).
+
+The form attribute takes as its value the ID of the form element with which the fieldset or control should be associated.
+
+If you ever remove the form attribute throughout your webpage, use el.removeAttribute('form') and not el.setAttribute('form', '').
+
+
+
+autocomplete: For most form fields, this will be a drop-down that appears when the user begins typing.
+
+If the autocomplete attribute is omitted from the form, the default value is "on", meaning that autocomplete, by default, is in forms. To turn it off, use autocomplete="off". This is a good idea for sensitive information, such as a credit card number, or data that will never need to be reused, such as a CAPTCHA.
+
+
+
+datalist Element and list attribute:
+
+datalists are text fields with a set of predefined autocomplete options. Unlike the select element, users can enter whatever value they like, but they’ll be presented with a set of suggested options.
+
+image: https://uploads.sitepoint.com/wp-content/uploads/2017/02/1488263230fig_4_datalist_new.png
+
+The datalist element, much like select, is a list of options, with each one placed in an option element. You then associate the datalist with an input using the list attribute on the input. The list attribute takes as its value the id attribute of the datalist you want to associate with the input. One datalist can be associated with several input fields.
+
+example:
+-->
+
+<label for="favcolor">Favorite Color</label>
+
+<input type="color" list="colors" id="favcolor" name="favcolor">
+<datalist id="colors">
+
+
+    <option value="#0000FF" label="blue">
+
+
+    <option value="#008000" label="green">
+
+
+    <option value="#ff0000" label="red">
+
+
+    <option value="#663399" label="RebeccaPurple">
+</datalist>
+
+<!--
+autofocus: Only one element can have the autofocus attribute on it, as it will focus the user to a certain input. It is often not used though.
+
+For more info, look into the links.
+
+
+
+
+
+Notes from videos:
+
+video 1: https://www.youtube.com/watch?v=fbVfFsWMYnw
+When getting inputs from the user, make sure that the reward of their input is greater than the pain of putting their information in. If it's too painful to fill out a form, they won't fill it out because the reward just isn't worth it.
+
+video 2: https://www.youtube.com/watch?v=P_-n-28GJWQ
+Every form must have a decriptive title so the user knows why they are putting in their information.
+
+Never use the word "submit" on the submit button. Instead, use something like "I want to...".
+
+Only have essential questions on the form. Don't make the user enter anything that is deemed unnessasary.
+
+clearly identify what is required and what is optional.
+
+Labels should be put above and left align with their related input.
+
+forms should be in a single column
+
+use only one input field for phone numbers
+
+if there are less than 5 options, use radio buttons, if there are more than 5, use a dropdown menu
+
+use placeholder text to help guide users on what information they need to put down
+
+order your radio buttons and dropdown boxes logically (such as starting from Monday-Sunday, or going alphabetically)
+
+wrap all labels to their input, meaning if the user clicks on the label, it's input field should be selected.
+
+never have a reset button on a form
+
+show a comfirmation page or message that tells the user that their input was enter correctly.
+
+stylize your form so that it shows that care was put into it.
+
+inputs should have a minimum height of 44px
+
+group related information using proper spacing and fieldsets
+
+video 3: https://www.youtube.com/watch?v=ktYYgfcy3-I
+
+It is important that each input has these things:
+-type (what type of input will it take?)
+-name
+-User instructions
+-value
+-required or not
+-placeholder
+
+The type is very important for inputs esspeciailly for mobile view
+
+for radio boxes, if you only want one option to be selected, all the radio boxes must have the same name attribute value
+
+video 4: https://www.youtube.com/watch?v=vCG7tfn9Yw8
+
+You can stylize inputs by their attributes like the following:
+
+input[type="text"] {}
+
+Never rely on computer mobile apperance for your website. Somethings will always look different from desktop and mobile. Check on your own phone for errors that could show up, esspecially with css declarations
+
+video 5: https://www.youtube.com/watch?v=SHc2gAQ7l3c
+
+the video shows best practices that you should look out for when looking at forms
+
+-->
