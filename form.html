@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="A Product Review form page that uses and meets the design principles of a form.">
+    <meta name="author" content="Luke Ina">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <label>Product Name
+                <select id="product-name" name="product" required>
+                    <option disabled selected>Select a Product...</option>
+                </select>
+            </label>
+            <label>Overall Rating</label>
+                <div class="star-rating">
+                    <input type="radio" id="one-star" name="rating" value="1" required><label for="one-star"></label>
+                    <input type="radio" id="two-star" name="rating" value="2" required><label for="two-star"></label>
+                    <input type="radio" id="three-star" name="rating" required><label for="three-star"></label>
+                    <input type="radio" id="four-star" name="rating" required><label for="four-star"></label>
+                    <input type="radio" id="five-star" name="rating" required><label for="five-star"></label>
+                </div>
+            </label>
+
+
+
+
+
+
+
+        </form>
+    </main>
+    <footer>
+        <p id="copyright">
+            ©<span id="currentyear"></span>💻Luke Ina💻British Columbia, Canada
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
