@@ -1,12 +1,37 @@
-label {
+body {
+    margin: 0 auto;
+}
+
+form {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 800px;
+    background-color: lightgray;
+    padding: 1rem;
+}
+
+label,
+div,
+input[type="submit"] {
     display: block;
     margin: 2rem 0 0 0;
 }
 
+input[type="checkbox"] {
+    padding: 0;
+}
+
 select,
-input {
+input[type="radio"],
+input[type="date"],
+textarea,
+input[type="text"],
+input[type="submit"] {
     display: block;
     padding: 1rem;
+    width: 100%;
+    max-width: 700px;
+    min-width: 200px;
 }
 
 select:required,
@@ -42,4 +67,29 @@ input:required {
 
 .star-rating input:checked~label:before {
     content: '\2605';
+}
+
+input[type="submit"] {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+footer,
+header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#copyright {
+    justify-content: center;
+    align-items: center;
+}
+
+
+#lastModified {
+    color: rgb(255, 255, 0);
 }
