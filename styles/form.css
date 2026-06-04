@@ -1,3 +1,7 @@
+:root {
+    --primary-color: darkblue;
+}
+
 body {
     margin: 0 auto;
     font-family: "Lato", sans-serif;
@@ -6,17 +10,31 @@ body {
     font-size: 1.1rem;
 }
 
+main{
+    width: 100%;
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
 form {
     margin: 1rem auto;
-    width: 100%;
-    max-width: 450px;
     background-color: lightgray;
     border: 2px solid darkgray;
     padding: 1rem;
 }
 
-.optional {
-    color: darkblue;
+fieldset {
+    border: none
+}
+
+.optional,
+legend {
+    color: var(--primary-color);
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .needed {
@@ -28,6 +46,16 @@ div,
 input[type="submit"] {
     display: block;
     margin: 1.5rem 0 0 0;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
 
 select,
