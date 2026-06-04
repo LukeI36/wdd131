@@ -10,7 +10,7 @@ body {
     font-size: 1.1rem;
 }
 
-main{
+main {
     width: 100%;
     max-width: 1000px;
     margin: 1rem auto;
@@ -46,16 +46,6 @@ div,
 input[type="submit"] {
     display: block;
     margin: 1.5rem 0 0 0;
-}
-
-input[type="submit"] {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-input[type="submit"]:hover {
-    background-color: white;
-    color: var(--primary-color);
 }
 
 select,
@@ -112,8 +102,15 @@ select:required:valid {
 }
 
 input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
     margin: 1rem auto;
     text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
 
 footer,
