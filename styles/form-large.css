@@ -1,12 +1,5 @@
 @media screen and (min-width: 500px) {
 
-    select,
-    input[type="radio"],
-    input[type="date"],
-    textarea,
-    input[type="text"],
-    input[type="submit"] {
-        max-width: 800px;
-        min-width: 400px;
-    }
+    
+
 }

@@ -18,13 +18,13 @@ main {
 
 form {
     margin: 1rem auto;
-    background-color: lightgray;
+    background-color: rgb(235, 235, 235);
     border: 2px solid darkgray;
     padding: 1rem;
 }
 
 fieldset {
-    border: none
+    border: none;
 }
 
 .optional,
@@ -38,14 +38,19 @@ legend {
 }
 
 .needed {
-    color: red;
+    color: rgb(214, 0, 0);
 }
 
 label,
 div,
 input[type="submit"] {
     display: block;
-    margin: 1.5rem 0 0 0;
+    margin: 1.75rem 0 0 0;
+}
+
+.checkbox,
+#stars {
+    margin: 0.75rem 0 0 0;
 }
 
 select,
@@ -56,9 +61,16 @@ input[type="text"],
 input[type="submit"] {
     display: block;
     padding: 1rem;
-    width: 100%;
-    max-width: 400px;
-    min-width: 200px;
+    width: 90%;
+    max-width: 800px;
+    min-width: 100px;
+    font-size: 1.1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    margin-top: 0;
 }
 
 select:required,
@@ -69,36 +81,6 @@ input:required {
 input:required:valid,
 select:required:valid {
     border-left: 8px solid green;
-}
-
-.star-rating {
-    display: flex;
-    flex-direction: row-reverse;
-    position: relative;
-    justify-content: space-between;
-    width: 4rem;
-
-}
-
-.star-rating input {
-    display: none;
-
-}
-
-.star-rating>label {
-    color: orange;
-}
-
-.star-rating label::before {
-    content: '\2606';
-    position: absolute;
-    top: 0px;
-    line-height: 26px;
-
-}
-
-.star-rating input:checked~label:before {
-    content: '\2605';
 }
 
 input[type="submit"] {
@@ -131,4 +113,40 @@ header {
 
 #lastModified {
     color: rgb(255, 255, 0);
+}
+
+/* Star rating system */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    justify-content: space-between;
+    width: 10rem;
+
+}
+
+.star-rating input {
+    display: none;
+
+}
+
+.star-rating>label {
+    font-size: 50px;
+    color: var(--primary-color);
+}
+
+.star-rating>label:hover {
+    color: purple;
+}
+
+.star-rating label::before {
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+
+}
+
+.star-rating input:checked~label:before {
+    content: '\2605';
 }
