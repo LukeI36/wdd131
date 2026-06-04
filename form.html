@@ -9,6 +9,7 @@
     <meta name="author" content="Luke Ina">
 
     <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
     <script src="scripts/form.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,22 +25,25 @@
     </header>
     <main>
         <form method="get" action="review.html">
-            <label for="product-name">Product Name</label>
+            <p><span class="needed">*</span> = required</p>
+
+            <label for="product-name">Product Name<span class="needed">*</span></label>
             <select id="product-name" name="product" required>
                 <option selected disabled value="">Select a Product...</option>
             </select>
 
-            <label for="star-rating">Overall Rating</label>
-            <div id="star-rating" class="star-rating">
-                <input type="radio" id="one-star" name="rating" value="1" required><label for="one-star"></label>
-                <input type="radio" id="two-star" name="rating" value="2" required><label for="two-star"></label>
-                <input type="radio" id="three-star" name="rating" value="3" required><label for="three-star"></label>
-                <input type="radio" id="four-star" name="rating" value="4" required><label for="four-star"></label>
-                <input type="radio" id="five-star" name="rating" value="5" required><label for="five-star"></label>
-            </div>
+            <label>Overall Rating<span class="needed">*</span>
+                <div id="stars" class="star-rating">
+                    <input type="radio" id="one-star" name="rating" value="1" required><label for="one-star"></label>
+                    <input type="radio" id="two-star" name="rating" value="2" required><label for="two-star"></label>
+                    <input type="radio" id="three-star" name="rating" value="3" required><label
+                        for="three-star"></label>
+                    <input type="radio" id="four-star" name="rating" value="4" required><label for="four-star"></label>
+                    <input type="radio" id="five-star" name="rating" value="5" required><label for="five-star"></label>
+                </div>
+            </label>
 
-
-            <label for="date">Date of Installation</label>
+            <label for="date">Date of Installation<span class="needed">*</span></label>
             <input type="date" id="date" name="date" required>
 
             <div>Which features did you find useful in the product? <span class="italic">(click all that apply)</span>
@@ -58,7 +62,7 @@
             <label for="your-name">Your Name<span class="optional"> (optional)</span></label>
             <input type="text" id="your-name" name="your-name">
 
-            <input type="submit" value="Send Review">
+            <input type="submit" value="Post Review">
         </form>
     </main>
     <footer>

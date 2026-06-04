@@ -8,8 +8,8 @@
     <meta name="description" content="A Review page that tells the user that their review was sent properly.">
     <meta name="author" content="Luke Ina">
 
-    <link rel="stylesheet" href="styles/form.css">
-    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/review.css">
+    <script src="scripts/review-count-local-storage.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +20,11 @@
 
 <body>
     <header>
-        <h1>Product Review</h1>
+        <h1>Review Complete</h1>
     </header>
     <main>
+        <p id="complete-message">Your review has successfully been posted.</p>
+        <p id="count">Amount of Reviews: <span id="review-count"></span></p>
     </main>
     <footer>
         <p id="copyright">

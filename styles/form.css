@@ -3,21 +3,31 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.1rem;
 }
 
 form {
     margin: 1rem auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 450px;
     background-color: lightgray;
+    border: 2px solid darkgray;
     padding: 1rem;
+}
+
+.optional {
+    color: darkblue;
+}
+
+.needed {
+    color: red;
 }
 
 label,
 div,
 input[type="submit"] {
     display: block;
-    margin: 2rem 0 0 0;
+    margin: 1.5rem 0 0 0;
 }
 
 select,
@@ -29,7 +39,7 @@ input[type="submit"] {
     display: block;
     padding: 1rem;
     width: 100%;
-    max-width: 700px;
+    max-width: 400px;
     min-width: 200px;
 }
 

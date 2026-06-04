@@ -1,0 +1,50 @@
+body {
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+footer,
+header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#complete-message {
+    text-align: center;
+    font-size: 3rem;
+    background-color: rgb(84, 139, 84);
+    color: white;
+    border: 3px solid rgb(46, 68, 46);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#count {
+    text-align: center;
+    font-size: 2rem;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+#copyright {
+    justify-content: center;
+    align-items: center;
+}
+
+
+#lastModified {
+    color: rgb(255, 255, 0);
+}
