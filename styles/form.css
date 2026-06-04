@@ -54,6 +54,10 @@ input[type="submit"] {
     margin: 0.75rem 0 0 0;
 }
 
+#stars{
+    margin: 0.75rem auto;
+}
+
 select,
 input[type="radio"],
 input[type="date"],
@@ -121,8 +125,9 @@ header {
     flex-direction: row-reverse;
     position: relative;
     justify-content: space-between;
-    width: 10rem;
-
+    width: 100%;
+    max-width: 14rem;
+    min-width: 3rem;
 }
 
 .star-rating input {
