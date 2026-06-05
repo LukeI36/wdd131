@@ -126,7 +126,7 @@ header {
     position: relative;
     justify-content: space-between;
     width: 100%;
-    max-width: 14rem;
+    max-width: 10rem;
     min-width: 3rem;
 }
 
@@ -136,7 +136,7 @@ header {
 }
 
 .star-rating>label {
-    font-size: 50px;
+    font-size: 40px;
     color: var(--primary-color);
 }
 
