@@ -1,0 +1,74 @@
+/* Common declarations (declarations used throughout each webpage of the website) */
+:root {
+    --primary-color: #3CB9DA;
+    --secondary-color: #030C0D;
+    --third-color: #ffffff;
+}
+
+body {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0 auto;
+}
+
+main {
+    margin: 0 auto;
+}
+
+div {
+    border: 2px solid var(--primary-color);
+    box-shadow:
+        0px 0px 5px 0px var(--primary-color) inset,
+        0px 0px 5px 0px var(--primary-color);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+h1,
+h2 {
+    margin: 2rem auto;
+    font-weight: 700;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 700;
+}
+
+nav {
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    padding: .5rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: block;
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: "Oxanium", sans-serif;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Code for Home page */
+
+#introduction{
+    width: 1000px;
+    font-size: 4rem;
+    margin: 10rem auto;
+}
