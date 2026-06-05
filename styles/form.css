@@ -54,7 +54,7 @@ input[type="submit"] {
     margin: 0.75rem 0 0 0;
 }
 
-#stars{
+#stars {
     margin: 0.75rem auto;
 }
 
@@ -74,8 +74,8 @@ input[type="submit"] {
 
 input[type="radio"],
 input[type="checkbox"] {
-    margin-right: 6px;
-    margin-top: 0;
+    margin-right: 10px;
+    transform: scale(1.5);
 }
 
 select:required,
