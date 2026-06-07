@@ -1,3 +1,12 @@
+// Menu
+const ham_Button = document.getElementById("menu")
+const navigation = document.getElementById("navigation")
+
+ham_Button.addEventListener("click", function () {
+    navigation.classList.toggle("open");
+    ham_Button.classList.toggle("open");
+})
+
 // Welcome message
 const welcomeMessageOutput = document.getElementById("welcome");
 let visits = Number(window.localStorage.getItem("visits-ls")) || 0;
