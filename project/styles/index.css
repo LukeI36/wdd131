@@ -226,10 +226,12 @@ a:hover {
     /* Home page code */
     #introduction {
         margin: 5rem auto;
+        font-size: 2.5rem;
     }
 
     #who-are-we {
         grid-template-columns: auto;
+        max-width: 250px;
     }
 
     #who-are-we h2 {
@@ -242,5 +244,6 @@ a:hover {
 
     #pages {
         grid-template-columns: 1fr;
+        margin: 0 auto;
     }
 }
