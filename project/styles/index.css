@@ -72,13 +72,17 @@ nav ul li a:hover {
     margin: 10rem auto;
 }
 
+#main-img {
+    width: 100%;
+}
+
 #who-are-we {
     margin: 1rem auto;
+    width: 100%;
+    max-width: 750px;
+    min-width: 200px;
     display: grid;
     grid-template-columns: auto 1fr;
-    width: 100%;
-    max-width: 800px;
-    min-width: 200px;
     align-items: center;
 }
 
@@ -105,6 +109,7 @@ nav ul li a:hover {
     border: none;
     box-shadow: none;
     margin: 0 auto;
+    padding: 0;
 }
 
 #pages div {
