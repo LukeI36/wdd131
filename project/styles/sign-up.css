@@ -1,4 +1,3 @@
-/* Common declarations (declarations used throughout each webpage of the website) */
 :root {
     --primary-color: #3CB9DA;
     --secondary-color: #030C0D;
@@ -97,84 +96,6 @@ a:hover {
     color: white;
 }
 
-/* Code for Home page */
-
-#introduction {
-    width: 100%;
-    max-width: 1000px;
-    min-width: 200px;
-    font-size: 4rem;
-    margin: 10rem auto;
-}
-
-#main-img {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1400px;
-    min-width: 200px;
-}
-
-#who-are-we {
-    margin: 1rem auto;
-    width: 100%;
-    max-width: 650px;
-    min-width: 200px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-}
-
-
-#who-are-we h2 {
-    grid-column: 1/3;
-    margin: .25rem auto;
-    font-size: 2rem;
-}
-
-#who-are-we img {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-}
-
-#who-are-we p {
-    font-size: 1.2rem;
-}
-
-#pages {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: none;
-    box-shadow: none;
-    margin: 0 auto;
-    padding: 0;
-}
-
-#pages div {
-    display: grid;
-    grid-template-rows: 1fr auto auto;
-}
-
-#pages div img {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 300px;
-    min-width: 100px;
-    align-items: center;
-}
-
-#pages a {
-    text-decoration: none;
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-#pages a:hover {
-    color: white;
-}
-
-
-/* mobile view */
 @media screen and (max-width: 700px) {
 
     /* Common code */
@@ -223,41 +144,5 @@ a:hover {
 
     #menu.open::before {
         content: "❌";
-    }
-
-    /* Home page code */
-    #introduction {
-        margin: 5rem auto;
-        font-size: 2rem;
-    }
-
-    #who-are-we {
-        grid-template-columns: auto;
-        max-width: 400px;
-    }
-
-    #who-are-we h2 {
-        grid-column: 1/2;
-    }
-
-    #who-are-we img {
-        grid-column: 1/2;
-    }
-
-    #pages {
-        grid-template-columns: 1fr;
-        margin: 0 auto;
-        max-width: 450px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    #who-are-we {
-        max-width: 250px;
-    }
-
-    #pages {
-        max-width: 300px;
     }
 }
