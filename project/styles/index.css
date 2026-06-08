@@ -206,7 +206,7 @@ a:hover {
     }
 
     #top-menu{
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     #menu {
@@ -217,7 +217,7 @@ a:hover {
         color: var(--secondary-color);
         font-size: 3rem;
         border: none;
-        top: -0.75rem;
+        top: 0;
         right: 1rem;
     }
 
