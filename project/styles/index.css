@@ -16,7 +16,8 @@ body {
     text-align: center;
 }
 
-div {
+div,
+section {
     border: 2px solid var(--primary-color);
     box-shadow:
         0px 0px 5px 0px var(--primary-color) inset,
@@ -88,13 +89,14 @@ a:hover {
     display: none;
 }
 
-#reference{
+#reference {
     text-decoration: underline;
 }
 
-#reference:hover{
+#reference:hover {
     color: white;
 }
+
 /* Code for Home page */
 
 #introduction {
@@ -192,7 +194,7 @@ a:hover {
         flex-direction: column;
     }
 
-    nav ul{
+    nav ul {
         padding: 0;
     }
 
@@ -211,7 +213,7 @@ a:hover {
         color: var(--secondary-color);
         font-size: 3rem;
         border: none;
-        top: -0.75rem;
+        top: -1rem;
         right: 1rem;
     }
 
@@ -226,12 +228,12 @@ a:hover {
     /* Home page code */
     #introduction {
         margin: 5rem auto;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     #who-are-we {
         grid-template-columns: auto;
-        max-width: 250px;
+        max-width: 400px;
     }
 
     #who-are-we h2 {
@@ -245,5 +247,17 @@ a:hover {
     #pages {
         grid-template-columns: 1fr;
         margin: 0 auto;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    #who-are-we {
+        max-width: 250px;
+    }
+
+    #pages {
+        max-width: 300px;
     }
 }
