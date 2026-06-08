@@ -209,6 +209,10 @@ a:hover {
         padding: 2rem;
     }
 
+    #top-menu.open{
+        padding-bottom: 0;
+    }
+
     #menu {
         display: block;
         position: absolute;
@@ -225,8 +229,14 @@ a:hover {
         content: "☰";
     }
 
+    #menu.open{
+        top: .5rem;
+        right: 1.25rem;
+    }
+
     #menu.open::before {
-        content: "❌";
+        content: "X";
+        font-size: 3rem;
     }
 
     /* Home page code */
