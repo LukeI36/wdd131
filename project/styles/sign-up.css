@@ -11,7 +11,7 @@ body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-style: normal;
     text-align: center;
 }
@@ -94,12 +94,24 @@ a:hover {
 
 /* Sign up code */
 
-#condition{
+#form-info {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+#condition {
     text-align: left;
 }
 
 #describe {
-    margin: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 200px;
+    margin: 3rem auto;
     text-align: center;
 }
 
@@ -135,7 +147,6 @@ form fieldset div {
     display: block;
     margin-top: 1rem;
     margin: 3rem 0 1rem 0;
-    font-size: 1.15rem;
     text-align: left;
 }
 
@@ -147,6 +158,7 @@ input[type="email"] {
     max-width: 600px;
     min-width: 100px;
     text-align: left;
+    font-size: 1.1rem;
 }
 
 input[type="checkbox"] {
@@ -168,7 +180,7 @@ input[type="checkbox"] {
 }
 
 input[type="submit"] {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 1rem;
@@ -182,6 +194,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+#complete {
+    margin: 12rem 1rem;
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -246,5 +263,10 @@ input[type="submit"]:hover {
     input[type="text"],
     input[type="email"] {
         max-width: 200px;
+    }
+
+    #complete {
+        margin: 5rem 1rem;
+        font-size: 2rem;
     }
 }

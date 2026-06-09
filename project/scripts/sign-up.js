@@ -9,23 +9,24 @@ ham_Button.addEventListener("click", function () {
     ham_Button.classList.toggle("open");
 })
 
-//Get user name
+//Get user name and display complete message
 const submit = document.getElementById("submit");
-const form = document.getElementById("form");
-const message = document.getElementById("complete")
+const form_content = document.getElementById("form-info");
+const message = document.getElementById("complete");
 submit.addEventListener("click", function () {
     if (form.checkValidity() == true) {
         const name = document.getElementById("your-name");
+        let create_username_ls = window.localStorage.getItem("name-ls") || "";
+        localStorage.setItem("name-ls", name.value);
+        let username = window.localStorage.getItem("name-ls");
         if (name.value !== "") {
-            let user_name = window.localStorage.getItem("name-ls") || "";
-            localStorage.setItem("name-ls", name.value);
-            message.innerHTML = `Thanks you ${user_name} for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
+            message.innerHTML = `Thank you ${username} for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
         }
         else {
-            message.textContent = `Thanks you for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
+            message.textContent = `Thank you for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
         }
 
-        form.textContent = ""
+        form_content.textContent = "";
 
     }
-})
+});

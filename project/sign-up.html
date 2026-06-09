@@ -28,7 +28,7 @@
             <nav>
                 <button id="menu" aria-label="Menu"></button>
                 <ul id="navigation">
-                    <li><a href=# id="home">Home</a></li>
+                    <li><a href="index.html" id="home">Home</a></li>
                     <li><a href=# id="history">History</a></li>
                     <li><a href=# id="characters">Characters</a></li>
                     <li><a href="sign-up.html" id="sign-up">Sign Up</a></li>
@@ -37,34 +37,38 @@
         </div>
     </header>
     <main>
-        <h1>Sign Up</h1>
-        <p id="describe">Subscribe to our service (completely free) to get the latest news of the Transformers franchise, whether
-            that be movies, TV shows, merchandise, etc.</p>
-        <form id="form">
-            <fieldset>
-                <legend>Steps to sign up</legend>
-                <p id="condition"><span class="required">*</span> = required</p>
-                <label for="email">Email<span class="required">*</span></label>
-                <input type="email" name="email" id="email" placeholder="Ex: Bob123@gmail" required>
+        <div id="form-info">
+            <h1>Sign Up</h1>
+            <p id="describe">Subscribe to our service (completely free) to get the latest news of the Transformers
+                franchise, whether
+                that be movies, TV shows, merchandise, etc.</p>
+            <form id="form">
+                <fieldset>
+                    <legend>Steps to sign up</legend>
+                    <p id="condition"><span class="required">*</span> = required</p>
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Ex: Bob123@gmail" required>
 
-                <div>What type of news do you want to see about the Transformers franchise? <span class="italic">(click
-                        all that apply)</span></div>
-                <label class="checkbox" for="movies"><input type="checkbox" id="movies" name="movies"
-                        value="yes">Movies</label>
-                <label class="checkbox" for="tv-shows"><input type="checkbox" id="tv-shows" name="tv-shows"
-                        value="yes">TV shows</label>
-                <label class="checkbox" for="comics"><input type="checkbox" id="comics" name="comics"
-                        value="yes">Comics</label>
-                <label class="checkbox" for="merchandise"><input type="checkbox" id="merchandise" name="merchandise"
-                        value="yes">Merchandise</label>
+                    <div>What type of news do you want to see about the Transformers franchise? <span
+                            class="italic">(click
+                            all that apply)</span></div>
+                    <label class="checkbox" for="movies"><input type="checkbox" id="movies" name="movies"
+                            value="yes">Movies</label>
+                    <label class="checkbox" for="tv-shows"><input type="checkbox" id="tv-shows" name="tv-shows"
+                            value="yes">TV shows</label>
+                    <label class="checkbox" for="comics"><input type="checkbox" id="comics" name="comics"
+                            value="yes">Comics</label>
+                    <label class="checkbox" for="merchandise"><input type="checkbox" id="merchandise" name="merchandise"
+                            value="yes">Merchandise</label>
 
 
-                <label>Your Name (optional)</label>
-                <input type="text" id="your-name" name="your-name">
+                    <label>Your Name (optional)</label>
+                    <input type="text" id="your-name" name="your-name">
 
-                <input type="submit" id="submit" value="Subscribe to our service">
-            </fieldset>
-        </form>
+                    <input type="submit" id="submit" value="Subscribe to our service">
+                </fieldset>
+            </form>
+        </div>
         <h2 id="complete"></h2>
     </main>
     <footer>

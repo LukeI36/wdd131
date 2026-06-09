@@ -31,5 +31,5 @@ if (name === "") {
     nameOutput.textContent = " ";
 }
 else {
-    nameOutput.textContent = ` ${name}`;
+    nameOutput.textContent = ` ${name},`;
 }

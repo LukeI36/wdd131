@@ -11,7 +11,7 @@ body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-style: normal;
     text-align: center;
 }
@@ -147,7 +147,7 @@ a:hover {
 
 #pages div {
     display: grid;
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: auto 1fr auto;
 }
 
 #pages div img {
