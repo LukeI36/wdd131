@@ -1,3 +1,4 @@
+/* Common Code */
 :root {
     --primary-color: #3CB9DA;
     --secondary-color: #030C0D;
@@ -15,8 +16,7 @@ body {
     text-align: center;
 }
 
-div,
-section {
+div {
     border: 2px solid var(--primary-color);
     box-shadow:
         0px 0px 5px 0px var(--primary-color) inset,
@@ -26,11 +26,11 @@ section {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     margin: 2rem auto;
     font-weight: 700;
     font-family: "Oxanium", sans-serif;
-    font-weight: 700;
 }
 
 header,
@@ -84,10 +84,6 @@ a:hover {
     display: none;
 }
 
-#ghost-text {
-    display: none;
-}
-
 #reference {
     text-decoration: underline;
 }
@@ -96,15 +92,101 @@ a:hover {
     color: white;
 }
 
+/* Sign up code */
+
+#condition{
+    text-align: left;
+}
+
+#describe {
+    margin: 1rem;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 1000px;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid var(--primary-color);
+    box-shadow:
+        0px 0px 5px 0px var(--primary-color) inset,
+        0px 0px 5px 0px var(--primary-color);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+legend {
+    background-color: var(--secondary-color);
+    font-size: 2rem;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+label,
+form fieldset div {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    display: block;
+    margin-top: 1rem;
+    margin: 3rem 0 1rem 0;
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"] {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    min-width: 100px;
+    text-align: left;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 12px;
+    text-align: left;
+}
+
+.required {
+    color: #f85252;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.checkbox {
+    margin-top: 0.25rem;
+}
+
+input[type="submit"] {
+    font-size: 1.25rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    box-shadow:
+        0px 0px 5px 0px var(--primary-color) inset,
+        0px 0px 5px 0px var(--primary-color);
+    margin: 2rem 0 1rem 0;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
 @media screen and (max-width: 700px) {
 
     /* Common code */
-
-    #ghost-text {
-        display: block;
-        color: var(--primary-color);
-        font-size: 1.5rem;
-    }
 
     #navigation {
         display: none;
@@ -126,6 +208,14 @@ a:hover {
         margin: .5rem;
     }
 
+    #top-menu {
+        padding: 2rem;
+    }
+
+    #top-menu.open {
+        padding-bottom: 0;
+    }
+
     #menu {
         display: block;
         position: absolute;
@@ -134,7 +224,7 @@ a:hover {
         color: var(--secondary-color);
         font-size: 3rem;
         border: none;
-        top: -1rem;
+        top: 0;
         right: 1rem;
     }
 
@@ -142,7 +232,19 @@ a:hover {
         content: "☰";
     }
 
+    #menu.open {
+        top: .5rem;
+        right: 1.25rem;
+    }
+
     #menu.open::before {
-        content: "❌";
+        content: "X";
+        font-size: 3rem;
+    }
+
+    /* Sign up code */
+    input[type="text"],
+    input[type="email"] {
+        max-width: 200px;
     }
 }

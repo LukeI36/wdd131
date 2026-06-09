@@ -16,8 +16,7 @@ body {
     text-align: center;
 }
 
-div,
-section {
+div {
     border: 2px solid var(--primary-color);
     box-shadow:
         0px 0px 5px 0px var(--primary-color) inset,
@@ -27,11 +26,11 @@ section {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     margin: 2rem auto;
     font-weight: 700;
     font-family: "Oxanium", sans-serif;
-    font-weight: 700;
 }
 
 header,
@@ -82,10 +81,6 @@ a:hover {
 }
 
 #menu {
-    display: none;
-}
-
-#ghost-text {
     display: none;
 }
 
@@ -179,12 +174,6 @@ a:hover {
 
     /* Common code */
 
-    #ghost-text {
-        display: block;
-        color: var(--primary-color);
-        font-size: 1.5rem;
-    }
-
     #navigation {
         display: none;
     }
@@ -205,11 +194,11 @@ a:hover {
         margin: .5rem;
     }
 
-    #top-menu{
+    #top-menu {
         padding: 2rem;
     }
 
-    #top-menu.open{
+    #top-menu.open {
         padding-bottom: 0;
     }
 
@@ -229,7 +218,7 @@ a:hover {
         content: "☰";
     }
 
-    #menu.open{
+    #menu.open {
         top: .5rem;
         right: 1.25rem;
     }
