@@ -1,4 +1,3 @@
-/* Common Code */
 :root {
     --primary-color: #3CB9DA;
     --secondary-color: #030C0D;
@@ -92,119 +91,10 @@ a:hover {
     color: white;
 }
 
-/* Sign up code */
+/* Characters code */
 
-#form-info {
-    border: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
 
-}
-
-#condition {
-    text-align: left;
-}
-
-#describe {
-    width: 100%;
-    max-width: 1000px;
-    min-width: 200px;
-    font-size: 1.5rem;
-    margin: 3rem auto;
-    text-align: center;
-}
-
-form {
-    width: 100%;
-    max-width: 1000px;
-    min-width: 200px;
-    margin: 0 auto;
-}
-
-fieldset {
-    border: 2px solid var(--primary-color);
-    box-shadow:
-        0px 0px 5px 0px var(--primary-color) inset,
-        0px 0px 5px 0px var(--primary-color);
-    padding: 1rem;
-    margin: 1rem;
-}
-
-legend {
-    background-color: var(--secondary-color);
-    font-size: 2rem;
-    font-family: "Oxanium", sans-serif;
-    font-weight: 700;
-    text-align: left;
-}
-
-label,
-form fieldset div {
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    display: block;
-    margin-top: 1rem;
-    margin: 3rem 0 1rem 0;
-    text-align: left;
-}
-
-input[type="text"],
-input[type="email"] {
-    display: block;
-    padding: 1rem;
-    width: 100%;
-    max-width: 600px;
-    min-width: 100px;
-    text-align: left;
-    font-size: 1.1rem;
-}
-
-input[type="checkbox"] {
-    transform: scale(1.5);
-    margin-right: 12px;
-    text-align: left;
-}
-
-.required {
-    color: #f85252;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.checkbox {
-    margin-top: 0.25rem;
-}
-
-input[type="submit"] {
-    font-size: 1.1rem;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 1rem;
-    border: 2px solid var(--primary-color);
-    box-shadow:
-        0px 0px 5px 0px var(--primary-color) inset,
-        0px 0px 5px 0px var(--primary-color);
-    margin: 2rem 0 1rem 0;
-}
-
-input[type="submit"]:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-#complete {
-    display: none;
-    width: 100%;
-    max-width: 1000px;
-    min-width: 200px;
-    margin: 12rem auto;
-    font-size: 2rem;
-}
-
+/* mobile view */
 @media screen and (max-width: 700px) {
 
     /* Common code */
@@ -261,21 +151,5 @@ input[type="submit"]:hover {
     #menu.open::before {
         content: "X";
         font-size: 3rem;
-    }
-
-    /* Sign up code */
-    #describe {
-        max-width: 450px;
-    }
-
-    input[type="text"],
-    input[type="email"] {
-        max-width: 200px;
-    }
-
-    #complete {
-        max-width: 450px;
-        margin: 5rem auto;
-        font-size: 2rem;
     }
 }

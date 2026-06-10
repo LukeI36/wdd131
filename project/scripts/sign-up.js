@@ -19,6 +19,7 @@ submit.addEventListener("click", function () {
         let create_username_ls = window.localStorage.getItem("name-ls") || "";
         localStorage.setItem("name-ls", name.value);
         let username = window.localStorage.getItem("name-ls");
+        message.style.display = "block";
         if (name.value !== "") {
             message.innerHTML = `Thank you ${username} for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
         }
