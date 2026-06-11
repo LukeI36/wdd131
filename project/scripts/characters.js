@@ -23,6 +23,8 @@ const characters = [
         weapons: "Energon axe, Ion blaster",
         quote: "\"Freedom is the right of all sentient beings.\"",
         source_name: "optimus-prime",
+        full_body_max_width: "300px",
+        alternative_max_width: "600px",
         title1: "Before being Prime",
         fact1: "Optimus Prime hasn't always been \"Optimus Prime\". He used to be known as Orion Pax, and in more recent years, has been depicted as a clerk or an energon miner.",
         title2: "Chosen",
@@ -38,6 +40,8 @@ const characters = [
         weapons: "Fusion cannon, Energon flail",
         quote: "\"Peace through tyranny!\"",
         source_name: "megatron",
+        full_body_max_width: "300px",
+        alternative_max_width: "600px",
         title1: "We were Brothers Once",
         fact1: "Megatron was once friends with the Autobot leader, Optimus Prime, when he was originally Orion Pax. They both had the same view of Cybertron's corrupted hierarchy and wanted to change it. While Orion wanted to change the hierarchy peacefully, Megatron wanted to change it by force.",
         title2: "Grand Purpose",
@@ -53,6 +57,8 @@ const characters = [
         weapons: "Blasters, Plasma Cannon",
         quote: "\"Sting like a bee.\"",
         source_name: "bumblebee",
+        full_body_max_width: "225px",
+        alternative_max_width: "400px",
         title1: "Icon",
         fact1: "While Bumblebee is inspired and looks up to his leader, Optimus Prime, most Autobots respect and look up to him, due to his brave heart and friendly demeanor.",
         title2: "Short Advantage",
@@ -68,6 +74,8 @@ const characters = [
         weapons: "Null Rays",
         quote: "\"Conquest is made of the ashes of one's enemies.\"",
         source_name: "starscream",
+        full_body_max_width: "275px",
+        alternative_max_width: "600px",
         title1: "Worthy Leader",
         fact1: "Starscream often clashes with the Decepticon leader, Megatron, believeing that he would be a better leader. Starscream will take any chance he can take to make Megatron fall so that he could take over and be the leader of the Decepticons.",
         title2: "Seekers",
@@ -153,7 +161,7 @@ function infopage(currentArray, character) {
     mainImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-full-body.webp`);
     mainImg.setAttribute("alt", `${character.name}`);
     mainImg.setAttribute("loading", "lazy");
-    mainImg.style.maxWidth = "300px"
+    mainImg.style.maxWidth = `${character.full_body_max_width}`;
 
     const transformButton = document.createElement("button");
     transformButton.textContent = "Transform";
@@ -161,11 +169,11 @@ function infopage(currentArray, character) {
     transformButton.addEventListener("click", () => {
         if (mainImg.getAttribute("src") === `images/characters/${character.source_name}/${character.source_name}-full-body.webp`) {
             mainImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-alternative.webp`);
-            mainImg.style.maxWidth = "600px"
+            mainImg.style.maxWidth = `${character.alternative_max_width}`;
         }
         else {
             mainImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-full-body.webp`);
-            mainImg.style.maxWidth = "300px"
+            mainImg.style.maxWidth = `${character.full_body_max_width}`;
         }
     });
 
