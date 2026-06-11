@@ -22,7 +22,7 @@ const characters = [
         alt_mode: "Semi Truck",
         weapons: "Energon axe, Ion blaster",
         quote: "\"Freedom is the right of all sentient beings.\"",
-        img_name: "optimus-prime",
+        source_name: "optimus-prime",
         title1: "Before being Prime",
         fact1: "Optimus Prime hasn't always been \"Optimus Prime\". He used to be known as Orion Pax, and in more recent years, has been depicted as a clerk or an energon miner.",
         title2: "Chosen",
@@ -37,7 +37,7 @@ const characters = [
         alt_mode: "Gun",
         weapons: "Fusion cannon, Energon flail",
         quote: "\"Peace through tyranny!\"",
-        img_name: "megatron",
+        source_name: "megatron",
         title1: "We were Brothers Once",
         fact1: "Megatron was once friends with the Autobot leader, Optimus Prime, when he was originally Orion Pax. They both had the same view of Cybertron's corrupted hierarchy and wanted to change it. While Orion wanted to change the hierarchy peacefully, Megatron wanted to change it by force.",
         title2: "Grand Purpose",
@@ -52,7 +52,7 @@ const characters = [
         alt_mode: "Volkswagen Beetle",
         weapons: "Blasters, Plasma Cannon",
         quote: "\"Sting like a bee.\"",
-        img_name: "bumblebee",
+        source_name: "bumblebee",
         title1: "Icon",
         fact1: "While Bumblebee is inspired and looks up to his leader, Optimus Prime, most Autobots respect and look up to him, due to his brave heart and friendly demeanor.",
         title2: "Short Advantage",
@@ -67,7 +67,7 @@ const characters = [
         alt_mode: "Fighter Jet",
         weapons: "Null Rays",
         quote: "\"Conquest is made of the ashes of one's enemies.\"",
-        img_name: "starscream",
+        source_name: "starscream",
         title1: "Worthy Leader",
         fact1: "Starscream often clashes with the Decepticon leader, Megatron, believeing that he would be a better leader. Starscream will take any chance he can take to make Megatron fall so that he could take over and be the leader of the Decepticons.",
         title2: "Seekers",
@@ -78,7 +78,7 @@ const characters = [
 ];
 
 function characterCards(charArray) {
-    information.innerHTML = "";
+    information.style.display = "none";
 
     charArray.forEach(character => {
         const fragment = document.createDocumentFragment();
@@ -88,13 +88,13 @@ function characterCards(charArray) {
 
         cardContainer.classList.add("character-card");
 
-        nameOutput.classList.add("character-title");
-        nameOutput.textContent = `${character.name}`
-
-        cardImg.setAttribute("src", `images/characters/${character.img_name}/${character.img_name}-card.webp`);
+        cardImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-card.webp`);
         cardImg.setAttribute("alt", `${character.name} card display`);
         cardImg.setAttribute("loading", "lazy");
         cardImg.classList.add("card-image");
+
+        nameOutput.classList.add("character-title");
+        nameOutput.innerHTML = `<a class="link" href=# id="${character.source_name}">${character.name}</a>`;
 
         fragment.appendChild(cardImg);
         fragment.appendChild(nameOutput);
@@ -102,6 +102,14 @@ function characterCards(charArray) {
         cardContainer.appendChild(fragment);
 
         characterCardOutput.appendChild(cardContainer);
+
+        const link = document.getElementById(`${character.source_name}`);
+
+        link.addEventListener("click", () => {
+            characterCardOutput.style.display = "none";
+            information.style.display = "inline";
+            
+        });
     });
 };
 
