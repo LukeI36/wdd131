@@ -13,6 +13,7 @@ ham_Button.addEventListener("click", function () {
 const submit = document.getElementById("submit");
 const form_content = document.getElementById("form-info");
 const message = document.getElementById("complete");
+
 submit.addEventListener("click", function () {
     if (form.checkValidity() == true) {
         const name = document.getElementById("your-name");

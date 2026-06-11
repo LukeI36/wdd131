@@ -79,6 +79,8 @@ const characters = [
 
 function characterCards(charArray) {
     information.style.display = "none";
+    library.style.display = "inline";
+    characterCardOutput.innerHTML = ""
 
     charArray.forEach(character => {
         const fragment = document.createDocumentFragment();
@@ -106,11 +108,120 @@ function characterCards(charArray) {
         const link = document.getElementById(`${character.source_name}`);
 
         link.addEventListener("click", () => {
-            characterCardOutput.style.display = "none";
-            information.style.display = "inline";
-            
+            infopage(charArray, character);
         });
     });
 };
 
+//info pages
+function infopage(currentArray, character) {
+    library.style.display = "none";
+    information.style.display = "inline";
+    information.innerHTML = "";
+
+    const fragment = document.createDocumentFragment();
+
+    // Go back to Character Cards
+    const goBack = document.createElement("p");
+    goBack.setAttribute("id", "go-back")
+    goBack.innerHTML = "<a href=#><- Go back</a>";
+    goBack.addEventListener("click", () => {
+        characterCards(currentArray);
+    });
+    fragment.appendChild(goBack);
+
+    // Title and quote
+    const botName = document.createElement("h1");
+    botName.textContent = `${character.name}`
+    botName.setAttribute("id", "bot-name");
+    fragment.appendChild(botName);
+
+    const botQuote = document.createElement("h2");
+    botQuote.textContent = `${character.quote}`
+    botQuote.setAttribute("id", "bot-quote");
+    fragment.appendChild(botQuote);
+
+    // Transformer and info
+    const mainInfo = document.createElement("div");
+    mainInfo.setAttribute("id", "main-info");
+
+    const botDisplay = document.createElement("div");
+    botDisplay.setAttribute("id", "bot-display");
+
+    const mainImg = document.createElement("img");
+    mainImg.setAttribute("id", "bot-image");
+    mainImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-full-body.webp`);
+    mainImg.setAttribute("alt", `${character.name}`);
+    mainImg.setAttribute("loading", "lazy");
+    mainImg.style.maxWidth = "300px"
+
+    const transformButton = document.createElement("button");
+    transformButton.textContent = "Transform";
+    transformButton.setAttribute("id", "transform-button");
+    transformButton.addEventListener("click", () => {
+        if (mainImg.getAttribute("src") === `images/characters/${character.source_name}/${character.source_name}-full-body.webp`) {
+            mainImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-alternative.webp`);
+            mainImg.style.maxWidth = "600px"
+        }
+        else {
+            mainImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-full-body.webp`);
+            mainImg.style.maxWidth = "300px"
+        }
+    });
+
+    botDisplay.appendChild(transformButton);
+    botDisplay.appendChild(mainImg);
+    mainInfo.appendChild(botDisplay);
+
+    const details = document.createElement("div");
+    details.setAttribute("id", "details");
+
+    const botAlliance = document.createElement("p");
+    botAlliance.textContent = `Alliance: ${character.alliance}`;
+    details.appendChild(botAlliance);
+
+    const botRole = document.createElement("p");
+    botRole.textContent = `Role: ${character.role}`;
+    details.appendChild(botRole);
+
+    const botAlt = document.createElement("p");
+    botAlt.textContent = `Transforms into: ${character.alt_mode}`;
+    details.appendChild(botAlt);
+
+    const botWeapons = document.createElement("p");
+    botWeapons.textContent = `Weapons: ${character.weapons}`;
+    details.appendChild(botWeapons);
+
+    mainInfo.appendChild(details);
+    fragment.appendChild(mainInfo);
+
+    const facts = document.createElement("div");
+
+    information.appendChild(fragment);
+}
+
 characterCards(characters);
+
+//filters
+const currentFilterTitle = document.getElementById("current-filter");
+const noFilterLink = document.getElementById("no-filter");
+const autobotLink = document.getElementById("autobots");
+const decepticonLink = document.getElementById("decepticons");
+
+noFilterLink.addEventListener("click", () => {
+    currentFilterTitle.textContent = "No Filter";
+    characterCards(characters);
+});
+
+autobotLink.addEventListener("click", () => {
+    currentFilterTitle.textContent = "Autobots";
+    const autobotArray = characters.filter(character => character.alliance === "Autobot");
+    characterCards(autobotArray);
+});
+
+decepticonLink.addEventListener("click", () => {
+    currentFilterTitle.textContent = "Decepticons";
+    const decepticonArray = characters.filter(character => character.alliance === "Decepticon");
+    characterCards(decepticonArray);
+});
+
