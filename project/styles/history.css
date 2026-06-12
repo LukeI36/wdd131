@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #3CB9DA;
+    --secondary-color: #030C0D;
+}
+
+body {
+    margin: 0 auto;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-style: normal;
+    text-align: center;
+}
+
+div {
+    border: 2px solid var(--primary-color);
+    box-shadow:
+        0px 0px 5px 0px var(--primary-color) inset,
+        0px 0px 5px 0px var(--primary-color);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 2rem auto;
+    font-weight: 700;
+    font-family: "Oxanium", sans-serif;
+}
+
+header,
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 0 auto;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+#top-menu {
+    position: relative;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0 auto;
+}
+
+#header-logo {
+    text-align: start;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: block;
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: "Oxanium", sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#menu {
+    display: none;
+}
+
+#reference {
+    text-decoration: underline;
+}
+
+#reference:hover {
+    color: white;
+}
+
+/* mobile view */
+@media screen and (max-width: 700px) {
+
+    /* Common code */
+
+    #navigation {
+        display: none;
+    }
+
+    #navigation.open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 auto;
+        padding: .5rem;
+        border-bottom: 2px solid var(--secondary-color);
+        margin: .5rem;
+    }
+
+    #top-menu {
+        padding: 2rem;
+    }
+
+    #top-menu.open {
+        padding-bottom: 0;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        text-align: end;
+        background: none;
+        color: var(--secondary-color);
+        font-size: 3rem;
+        border: none;
+        top: 0;
+        right: 1rem;
+    }
+
+    #menu::before {
+        content: "☰";
+    }
+
+    #menu.open {
+        top: .5rem;
+        right: 1.25rem;
+    }
+
+    #menu.open::before {
+        content: "X";
+        font-size: 3rem;
+    }
+}
