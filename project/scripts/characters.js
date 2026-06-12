@@ -25,12 +25,11 @@ const characters = [
         source_name: "optimus-prime",
         full_body_max_width: "300px",
         alternative_max_width: "600px",
-        title1: "Before being Prime",
-        fact1: "Optimus Prime hasn't always been \"Optimus Prime\". He used to be known as Orion Pax, and in more recent years, has been depicted as a clerk or an energon miner.",
-        title2: "Chosen",
-        fact2: "The ancient prime artifact called the \"Matrix of Leadership\", chose Orion Pax to be it's bearer, which transformed Orion Pax to Optimus Prime.",
-        title3: "Double Edge Sword",
-        fact3: "One of the key characteristics that Optimus Prime has is his compassion to all sentient beings. While the Decepticons have used Optimus' sense of compassion against him, it is also the source of his strength."
+        titles: ["Before being Prime", "Chosen", "Double Edge Sword"],
+        facts: [
+            "Optimus Prime hasn't always been \"Optimus Prime\". He used to be known as Orion Pax, and in more recent years, has been depicted as a clerk or an energon miner.",
+            "The ancient prime artifact called the \"Matrix of Leadership\", chose Orion Pax to be it's bearer, which transformed Orion Pax to Optimus Prime.",
+            "One of the key characteristics that Optimus Prime has is his compassion to all sentient beings. While the Decepticons have used Optimus' sense of compassion against him, it is also the source of his strength."]
     },
     {
         name: "Megatron",
@@ -40,14 +39,14 @@ const characters = [
         weapons: "Fusion cannon, Energon flail",
         quote: "\"Peace through tyranny!\"",
         source_name: "megatron",
-        full_body_max_width: "300px",
+        full_body_max_width: "280px",
         alternative_max_width: "600px",
-        title1: "We were Brothers Once",
-        fact1: "Megatron was once friends with the Autobot leader, Optimus Prime, when he was originally Orion Pax. They both had the same view of Cybertron's corrupted hierarchy and wanted to change it. While Orion wanted to change the hierarchy peacefully, Megatron wanted to change it by force.",
-        title2: "Grand Purpose",
-        fact2: "As Megatron began to lead the Decepticons and fight many battles, he began to believe in a grand purpose for his race, that they were destined to be an empire across the universe and that he would be the head of it.",
-        title3: "Reformed",
-        fact3: "Retreating to space after a battle on Earth, Megatron became severely injured, to the point where the Decepticons decided to abandon him and leave him drifting through space. He was later found by the planet-eater, Unicron, where he was reformed into Galvatron. As a result, Megatron became a mere servant and lost his free will."
+        titles: ["We were Brothers Once", "Grand Purpose", "Reformed"],
+        facts: [
+            "Megatron was once friends with the Autobot leader, Optimus Prime, when he was originally Orion Pax. They both had the same view of Cybertron's corrupted hierarchy and wanted to change it. While Orion wanted to change the hierarchy peacefully, Megatron wanted to change it by force.",
+            "As Megatron began to lead the Decepticons and fight many battles, he began to believe in a grand purpose for his race, that they were destined to be an empire across the universe and that he would be the head of it.",
+            "Retreating to space after a battle on Earth, Megatron became severely injured, to the point where the Decepticons decided to abandon him and leave him drifting through space. He was later found by the planet-eater, Unicron, where he was reformed into Galvatron. As a result, Megatron became a mere servant and lost his free will."
+        ]
     },
     {
         name: "Bumblebee",
@@ -57,14 +56,13 @@ const characters = [
         weapons: "Blasters, Plasma Cannon",
         quote: "\"Sting like a bee.\"",
         source_name: "bumblebee",
-        full_body_max_width: "225px",
+        full_body_max_width: "210px",
         alternative_max_width: "400px",
-        title1: "Icon",
-        fact1: "While Bumblebee is inspired and looks up to his leader, Optimus Prime, most Autobots respect and look up to him, due to his brave heart and friendly demeanor.",
-        title2: "Short Advantage",
-        fact2: "Due to his short size, bumblebee is able to complete certain missions that most Autobots could not.",
-        title3: "Voice Loss",
-        fact3: "In some adaptations of Transformers media, Bumblebee is unable to speak, often times because a Decepticon ripped out his voicebox. In order to communicate with his commrades, he uses a radio to mumble up words from channels to make full sentences."
+        titles: ["Icon", "Short Advantage", "Voice Loss"],
+        facts: [
+            "While Bumblebee is inspired and looks up to his leader, Optimus Prime, most Autobots respect and look up to him, due to his brave heart and friendly demeanor.",
+            "Due to his short size, bumblebee is able to complete certain missions that most Autobots could not.",
+            "In some adaptations of Transformers media, Bumblebee is unable to speak, often times because a Decepticon ripped out his voicebox. In order to communicate with his commrades, he uses a radio to mumble up words from channels to make full sentences."]
     },
     {
         name: "Starscream",
@@ -76,12 +74,11 @@ const characters = [
         source_name: "starscream",
         full_body_max_width: "275px",
         alternative_max_width: "600px",
-        title1: "Worthy Leader",
-        fact1: "Starscream often clashes with the Decepticon leader, Megatron, believeing that he would be a better leader. Starscream will take any chance he can take to make Megatron fall so that he could take over and be the leader of the Decepticons.",
-        title2: "Seekers",
-        fact2: "Starscream leads his own team in the ranks for the Decepticons known as the \"Seekers\"",
-        title3: "Invincible",
-        fact3: "Unlike most cybertronians, Starscream's spark (a cybertronian's soul) was different. Being a mutated spark, Starscream's spark could not be destroyed, meaning for the rest of space and time, Starscream soul will still live somewhere in the universe."
+        titles: ["Worthy Leader", "Seekers", "Immortal"],
+        facts: [
+            "Starscream often clashes with the Decepticon leader, Megatron, believeing that he would be a better leader. Starscream will take any chance he can take to make Megatron fall so that he could take over and be the leader of the Decepticons.",
+            "Starscream leads his own team in the ranks for the Decepticons known as the \"Seekers\". All the members of the Seekers transform into fighter jets and most of them have a similar look to starscream. Two of the most well known members of the Seekers are Skywarp (purple) and Thundercracker (blue).",
+            "Unlike most cybertronians, Starscream's spark (a cybertronian's soul) was different. Being a mutated spark, Starscream's spark could not be destroyed, making him immortal. For the rest of space and time, Starscream soul will still live somewhere in the Transformer universe."]
     }
 ];
 
@@ -203,7 +200,39 @@ function infopage(currentArray, character) {
     mainInfo.appendChild(details);
     fragment.appendChild(mainInfo);
 
-    const facts = document.createElement("div");
+    const factContainer = document.createElement("div");
+    factContainer.setAttribute("id", "bot-facts");
+    const botFactsTitle = document.createElement("h2");
+    botFactsTitle.textContent = `Facts about ${character.name}:`
+    botFactsTitle.setAttribute("id", "bot-facts-title");
+    factContainer.appendChild(botFactsTitle);
+
+    const forLoopLength = character.facts.length;
+    for (let i = 0; i < forLoopLength; i++) {
+        const factCard = document.createElement("div");
+        factCard.setAttribute("class", "fact-container");
+
+        const factTitle = document.createElement("h3");
+        factTitle.textContent = `${character.titles[i]}`;
+        factTitle.setAttribute("class", "fact-title");
+        factCard.appendChild(factTitle);
+
+        const factImg = document.createElement("img");
+        factImg.setAttribute("class", "fact-image");
+        factImg.setAttribute("src", `images/characters/${character.source_name}/${character.source_name}-fact-image-${i + 1}.webp`);
+        factImg.setAttribute("alt", `${character.name} fact ${i + 1} display`);
+        factImg.setAttribute("loading", "lazy");
+        factCard.appendChild(factImg);
+
+        const factInfo = document.createElement("p");
+        factInfo.textContent = `${character.facts[i]}`;
+        factInfo.setAttribute("class", "fact-info");
+        factCard.appendChild(factInfo);
+
+        factContainer.appendChild(factCard);
+    }
+
+    fragment.appendChild(factContainer);
 
     information.appendChild(fragment);
 }
