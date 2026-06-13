@@ -58,10 +58,6 @@ nav {
     margin: 0 auto;
 }
 
-#header-logo {
-    text-align: start;
-}
-
 nav ul {
     display: flex;
     flex-direction: row;
