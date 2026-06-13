@@ -283,6 +283,18 @@ a:hover {
     box-shadow: none;
 }
 
+.fact-container{
+    padding-top: 0;
+}
+
+.bot-facts-title{
+    font-size: 2.5rem;
+}
+
+.fact-title{
+    font-size: 1.5rem;
+}
+
 .fact-image {
     width: 100%;
     max-width: 500px;

@@ -28,8 +28,8 @@ const characters = [
         titles: ["Before being Prime", "Chosen", "Double Edge Sword"],
         facts: [
             "Optimus Prime hasn't always been \"Optimus Prime\". He used to be known as Orion Pax, and in more recent years, has been depicted as a clerk or an energon miner.",
-            "The ancient prime artifact called the \"Matrix of Leadership\", chose Orion Pax to be it's bearer, which transformed Orion Pax to Optimus Prime.",
-            "One of the key characteristics that Optimus Prime has is his compassion to all sentient beings. While the Decepticons have used Optimus' sense of compassion against him, it is also the source of his strength."]
+            "The ancient prime artifact called the \"Matrix of Leadership\" chose Orion Pax to be its bearer, which transformed Orion Pax to Optimus Prime.",
+            "One of the key characteristics that Optimus Prime has is his compassion to all sentient beings. While the Decepticons have used Optimus Prime's sense of compassion against him, it is also the source of his strength."]
     },
     {
         name: "Megatron",
@@ -45,7 +45,7 @@ const characters = [
         facts: [
             "Megatron was once friends with the Autobot leader, Optimus Prime, when he was originally Orion Pax. They both had the same view of Cybertron's corrupted hierarchy and wanted to change it. While Orion wanted to change the hierarchy peacefully, Megatron wanted to change it by force.",
             "As Megatron began to lead the Decepticons and fight many battles, he began to believe in a grand purpose for his race, that they were destined to be an empire across the universe and that he would be the head of it.",
-            "Retreating to space after a battle on Earth, Megatron became severely injured, to the point where the Decepticons decided to abandon him and leave him drifting through space. He was later found by the planet-eater, Unicron, where he was reformed into Galvatron. As a result, Megatron became a mere servant and lost his free will."
+            "Retreating to space after a battle on Earth, Megatron became severely injured, to the point where the Decepticons decided to abandon him and leave him drifting through space. He was later found by the planet-eater, Unicron, where he was reformed into Galvatron. However, as a result of being reformed, Megatron became a servant to Unicron and lost his free will."
         ]
     },
     {
@@ -60,9 +60,9 @@ const characters = [
         alternative_max_width: "400px",
         titles: ["Icon", "Short Advantage", "Voice Loss"],
         facts: [
-            "While Bumblebee is inspired and looks up to his leader, Optimus Prime, most Autobots respect and look up to him, due to his brave heart and friendly demeanor.",
-            "Due to his short size, bumblebee is able to complete certain missions that most Autobots could not.",
-            "In some adaptations of Transformers media, Bumblebee is unable to speak, often times because a Decepticon ripped out his voicebox. In order to communicate with his commrades, he uses a radio to mumble up words from channels to make full sentences."]
+            "While Bumblebee looks up to his leader, Optimus Prime, most of the Autobots look up to Bumblebee, due to his brave heart and friendly personality.",
+            "Due to his short size, Bumblebee is able to complete certain missions that most Autobots could not.",
+            "In some adaptations of Transformers media, Bumblebee is unable to speak, oftentimes because a Decepticon ripped out his voicebox. In order to communicate with his comrades, he uses a radio to mumble up words from channels to make full sentences."]
     },
     {
         name: "Starscream",
@@ -76,9 +76,9 @@ const characters = [
         alternative_max_width: "600px",
         titles: ["Worthy Leader", "Seekers", "Immortal"],
         facts: [
-            "Starscream often clashes with the Decepticon leader, Megatron, believeing that he would be a better leader. Starscream will take any chance he can take to make Megatron fall so that he could take over and be the leader of the Decepticons.",
-            "Starscream leads his own team in the ranks for the Decepticons known as the \"Seekers\". All the members of the Seekers transform into fighter jets and most of them have a similar look to starscream. Two of the most well known members of the Seekers are Skywarp (purple) and Thundercracker (blue).",
-            "Unlike most cybertronians, Starscream's spark (a cybertronian's soul) was different. Being a mutated spark, Starscream's spark could not be destroyed, making him immortal. For the rest of space and time, Starscream soul will still live somewhere in the Transformer universe."]
+            "Starscream often clashes with the Decepticon leader, Megatron, believing that he would be a better leader. Starscream will take any chance he can take to make Megatron fall so that he could take over and be the leader of the Decepticons.",
+            "Starscream leads his own team in the ranks for the Decepticons known as the \"Seekers\". All the members of the Seekers transform into fighter jets and most of them have a similar look to Starscream. Two of the most well known members of the Seekers are Skywarp (purple) and Thundercracker (blue).",
+            "Unlike most Cybertronians, Starscream's spark (a Cybertronian's soul) was different. Being a mutated spark, Starscream's spark could not be destroyed, making him immortal. For the rest of space and time, Starscream's soul will still live somewhere in the universe."]
     }
 ];
 
@@ -204,7 +204,7 @@ function infopage(currentArray, character) {
     factContainer.setAttribute("id", "bot-facts");
     const botFactsTitle = document.createElement("h2");
     botFactsTitle.textContent = `Facts about ${character.name}:`
-    botFactsTitle.setAttribute("id", "bot-facts-title");
+    botFactsTitle.setAttribute("class", "bot-facts-title");
     factContainer.appendChild(botFactsTitle);
 
     const forLoopLength = character.facts.length;
