@@ -1,4 +1,4 @@
-/* Common Code */
+/* Common Code (slightly adjusted to page)*/
 :root {
     --primary-color: #3CB9DA;
     --secondary-color: #030C0D;
@@ -25,15 +25,10 @@ div {
     margin: 1rem;
 }
 
-h1,
-h2,
-h3 {
+h1 {
     margin: 2rem auto;
     font-weight: 700;
     font-family: "Oxanium", sans-serif;
-}
-
-h1 {
     font-size: 5rem;
 }
 

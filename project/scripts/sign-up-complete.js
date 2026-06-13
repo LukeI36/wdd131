@@ -10,11 +10,11 @@ ham_Button.addEventListener("click", function () {
 })
 
 //Message
-const message = document.querySelector("h2");
+const message = document.getElementById("complete");
 let username = window.localStorage.getItem("name-ls") || "";
 
 if (username !== "") {
-    message.textContent = `Thank you ${username} for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
+    message.innerHTML = `Thank you ${username} for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
 }
 else {
     message.textContent = `Thank you for subscribing to our service. We will give you the latest news of the Transformers franhcise when they're announced.`;
