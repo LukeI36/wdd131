@@ -32,6 +32,10 @@ h3 {
     font-family: "Oxanium", sans-serif;
 }
 
+h1 {
+    font-size: 5rem;
+}
+
 header,
 footer {
     width: 100%;
@@ -94,6 +98,8 @@ a:hover {
 /* Characters code */
 /* Character Cards */
 #library {
+    padding: 0;
+    margin: 0 1rem 0 0;
     border: none;
     box-shadow: none;
 }
@@ -368,6 +374,10 @@ a:hover {
 
     #menu.open::before {
         content: "X";
+        font-size: 3rem;
+    }
+
+    h1 {
         font-size: 3rem;
     }
 
